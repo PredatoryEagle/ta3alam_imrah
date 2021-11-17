@@ -42,9 +42,10 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: Container(
+                        alignment: Alignment.topRight,
                         width: MediaQuery.of(context).size.width,
                         child: Text(
-                          'Name :',
+                          ': الإسم',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 20.0,
@@ -55,7 +56,8 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: CustomeTextField(
-                        hint: 'Enter your Name',
+                        isArabic: true,
+                        hint: 'ادخل اسمك',
                         icon: CupertinoIcons.person_solid,
                       ),
                     ),
@@ -78,6 +80,7 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: CustomeTextField(
+                        isArabic: false,
                         hint: 'example@gmail.com',
                         icon: Icons.email,
                       ),
@@ -101,6 +104,7 @@ class SignUpScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15.0),
                       child: CustomeTextField(
+                        isArabic: false,
                         hint: '********',
                         icon: Icons.lock,
                       ),

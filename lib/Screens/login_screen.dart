@@ -65,6 +65,7 @@ class LoginScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: CustomeTextField(
+                      isArabic: false,
                       hint: 'example@gmail.com',
                       icon: Icons.email,
                     ),
@@ -88,6 +89,7 @@ class LoginScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: CustomeTextField(
+                      isArabic: false,
                       hint: '********',
                       icon: Icons.lock,
                     ),
