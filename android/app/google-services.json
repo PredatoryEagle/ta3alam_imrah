@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1020166391471",
+    "project_id": "t3alam-imra7",
+    "storage_bucket": "t3alam-imra7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020166391471:android:8ed83d0025365f9b55765a",
+        "android_client_info": {
+          "package_name": "com.example.ta3alam_imrah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1020166391471-l6p2p5q3gsc2vmoerqic3plrav2inpkj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9l2EM6wt3rqMBPDaILU5ZyT_hANQLGu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1020166391471-l6p2p5q3gsc2vmoerqic3plrav2inpkj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
