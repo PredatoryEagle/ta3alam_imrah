@@ -1,26 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:ta3alam_imrah/constants/constants.dart';
 
 class CustomeTextField extends StatelessWidget {
   final String hint;
-  final IconData icon;
-  final bool isArabic;
   CustomeTextField({
     Key? key,
     required this.hint,
-    required this.icon,
-    required this.isArabic,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
+      textDirection: TextDirection.rtl,
       decoration: InputDecoration(
-        hintTextDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
-        prefixIcon: Icon(
-          icon,
+        hintStyle: TextStyle(
+          fontFamily: GoogleFonts.cairo().fontFamily,
         ),
+        hintTextDirection: TextDirection.rtl,
         filled: true,
         fillColor: KTextFieldcolor,
         enabledBorder: OutlineInputBorder(

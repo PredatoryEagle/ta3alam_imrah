@@ -17,173 +17,207 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: KMaincolor,
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 25.0),
-          child: Container(
-            height: heightScreen,
-            width: widthScreen,
-            child: ListView(
-              children: [
-                Column(
-                  children: [
-                    Image(
-                      height: 200,
-                      width: 200,
-                      image: AssetImage(
-                        'lib/Images/logo_ta3alamwamra7.png',
-                      ),
-                    ),
-                    SizedBox(
-                      height: 3.5,
-                    ),
-                    SizedBox(
-                      height: 15.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Container(
-                        alignment: Alignment.topRight,
-                        width: MediaQuery.of(context).size.width,
-                        child: Text(
-                          ': الإسم',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                          ),
+        child: Container(
+          height: heightScreen,
+          width: widthScreen,
+          child: ListView(
+            children: [
+              Stack(
+                children: [
+                  Column(
+                    children: [
+                      Image(
+                        height: 130,
+                        width: 270,
+                        image: AssetImage(
+                          'lib/Images/logo_ta3alamwamra7.png',
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: CustomeTextField(
-                        isArabic: true,
-                        hint: 'ادخل اسمك',
-                        icon: CupertinoIcons.person_solid,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Container(
-                        width: widthScreen,
-                        child: Text(
-                          'Email :',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: CustomeTextField(
-                        isArabic: false,
-                        hint: 'example@gmail.com',
-                        icon: Icons.email,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: Container(
-                        width: widthScreen,
-                        child: Text(
-                          'Password :',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 10.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                      child: CustomeTextField(
-                        isArabic: false,
-                        hint: '********',
-                        icon: Icons.lock,
-                      ),
-                    ),
-                    SizedBox(
-                      height: heightScreen * 0.03,
-                    ),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Sign up',
-                        style: TextStyle(),
-                      ),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25.0),
-                      ),
-                      color: Colors.yellow,
-                      textColor: Colors.black,
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 18.0),
+                        child: Container(
+                          alignment: Alignment.topRight,
+                          width: MediaQuery.of(context).size.width,
                           child: Text(
-                            'Already have an account ?',
+                            ': الإسم',
                             style: TextStyle(
-                              color: Colors.indigo,
-                              fontWeight: FontWeight.bold,
+                              color: KButtoncolor,
+                              fontSize: 20.0,
+                              fontFamily: GoogleFonts.cairo().fontFamily,
                             ),
                           ),
                         ),
-                        TextButton(
-                          onPressed: () {
-                            Navigator.pushNamed(
-                              context,
-                              LoginScreen.id,
-                            );
-                          },
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          height: 45,
+                          child: CustomeTextField(
+                            hint: 'ادخل اسمك',
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 28.0),
+                        child: Container(
+                          alignment: Alignment.topRight,
+                          width: widthScreen,
                           child: Text(
-                            'Login',
+                            ': البريد الإلكتروني',
                             style: TextStyle(
-                              color: Colors.deepOrangeAccent,
-                              fontWeight: FontWeight.bold,
-                              backgroundColor: Colors.lightBlue,
+                              color: KButtoncolor,
+                              fontSize: 20.0,
+                              fontFamily: GoogleFonts.cairo().fontFamily,
                             ),
                           ),
-                        )
-                      ],
-                    ),
-                    Text(
-                      '--------------Or with--------------',
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image(
-                          height: 60,
-                          width: 60,
-                          image: AssetImage(
-                            'lib/Images/Facebook.png',
+                        ),
+                      ),
+                      SizedBox(
+                        height: 1,
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          height: 45,
+                          child: CustomeTextField(
+                            hint: 'ادخل بريدك الإلكتروني',
                           ),
                         ),
-                        Image(
-                          height: 60,
-                          width: 60,
-                          image: AssetImage(
-                            'lib/Images/GooGle.png',
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          alignment: Alignment.topRight,
+                          width: widthScreen,
+                          child: Text(
+                            ': كلمة المرور',
+                            style: TextStyle(
+                              color: KButtoncolor,
+                              fontSize: 20.0,
+                              fontFamily: GoogleFonts.cairo().fontFamily,
+                            ),
                           ),
                         ),
-                      ],
-                    )
-                  ],
-                ),
-              ],
-            ),
+                      ),
+                      SizedBox(
+                        height: 1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          height: 45,
+                          child: CustomeTextField(
+                            hint: 'ادخل كلمة المرور',
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: Container(
+                          alignment: Alignment.topRight,
+                          width: widthScreen,
+                          child: Text(
+                            ': تأكيد كلمة المرور',
+                            style: TextStyle(
+                              color: KButtoncolor,
+                              fontSize: 20.0,
+                              fontFamily: GoogleFonts.cairo().fontFamily,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 1,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                        child: Container(
+                          height: 45,
+                          child: CustomeTextField(
+                            hint: 'اعد كلمة المرور',
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: heightScreen * 0.03,
+                      ),
+                      FlatButton(
+                        onPressed: () {},
+                        child: Text(
+                          'إنشاء حساب',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontFamily: GoogleFonts.cairo().fontFamily,
+                          ),
+                        ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        color: KButtoncolor,
+                        textColor: Colors.white,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(
+                                context,
+                                LoginScreen.id,
+                              );
+                            },
+                            child: Text(
+                              'سجل الدخول',
+                              style: TextStyle(
+                                color: Colors.deepOrangeAccent,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: GoogleFonts.cairo().fontFamily,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
+                            child: Text(
+                              'لديك حساب بالفعل ؟',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: GoogleFonts.cairo().fontFamily,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        '--------------Or with--------------',
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(
+                            height: 60,
+                            width: 60,
+                            image: AssetImage(
+                              'lib/Images/Facebook.png',
+                            ),
+                          ),
+                          Image(
+                            height: 60,
+                            width: 60,
+                            image: AssetImage(
+                              'lib/Images/GooGle.png',
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
