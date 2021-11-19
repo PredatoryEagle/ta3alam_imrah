@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ta3alam_imrah/Screens/home_screen.dart';
 import 'package:ta3alam_imrah/Screens/login_screen.dart';
 import 'package:ta3alam_imrah/Screens/signup_screen.dart';
 
@@ -17,11 +18,9 @@ class MyApp extends StatelessWidget {
       routes: {
         SignUpScreen.id: (context) => SignUpScreen(),
         LoginScreen.id: (context) => LoginScreen(),
+        HomeScreen.id: (context) => HomeScreen(),
       },
-      theme: ThemeData(
-
-      ),
-
+      theme: ThemeData(),
     );
   }
 }
