@@ -29,23 +29,60 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Center(
-              child: SingleChildScrollView(
-                child: Container(
-                  child: ListView(
-                    children: [
-                      Polygon(
-                        title: "اللغة العربية",
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    child: Image(
+                      image: AssetImage(
+                        'lib/Images/Polygon.png',
                       ),
-                      Polygon(
-                        title: "اللغة العربية",
-                      ),
-                      Polygon(
-                        title: "اللغة العربية",
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(70, 80, 0, 0),
+                    child: Text(
+                      'اللغة العرببة',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 60),
+                    child: Image(
+                      image: AssetImage(
+                        'lib/Images/Polygon.png',
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(70, 80, 0, 0),
+                    child: Text(
+                      'اللغة العرببة',
+                      style: TextStyle(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
