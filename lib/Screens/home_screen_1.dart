@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ta3alam_imrah/Screens/home_screen_2.dart';
 import 'package:ta3alam_imrah/constants/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomeScreen extends StatelessWidget {
-  static String id = 'HomeScreen';
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeScreen1 extends StatelessWidget {
+  static String id = 'HomeScreen1';
+  const HomeScreen1({Key? key}) : super(key: key);
   // String title;
 
   @override
@@ -13,7 +14,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.orange,
         toolbarHeight: 70,
-        title: Text("اختر المنهج الذي تريد تعلمه",
+        title: Text("اختر اللغة التي تريد تعلمها",
             style: TextStyle(
                 fontFamily: GoogleFonts.cairo().fontFamily, fontSize: 30)),
         centerTitle: true,
@@ -31,14 +32,24 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Polygone(
-                  title: 'الحروف',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(HomeScreen2.id);
+                  },
+                  child: Polygone(
+                    title: 'اللغة العربية',
+                  ),
                 ),
-                Polygone(
-                  title: 'الأرقام',
+                SizedBox(
+                  height: 20,
                 ),
-                Polygone(
-                  title: 'السبورة',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pushNamed(HomeScreen2.id);
+                  },
+                  child: Polygone(
+                    title: 'اللغة الإنجليزية',
+                  ),
                 ),
               ],
             ),

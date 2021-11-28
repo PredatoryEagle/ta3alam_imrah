@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ta3alam_imrah/Screens/home_screen.dart';
+import 'package:ta3alam_imrah/Screens/home_screen_1.dart';
+import 'package:ta3alam_imrah/Screens/home_screen_2.dart';
 import 'package:ta3alam_imrah/Screens/signup_screen.dart';
 import 'package:ta3alam_imrah/Widgets/customeTextField.dart';
 import 'package:ta3alam_imrah/constants/constants.dart';
@@ -87,7 +88,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       FlatButton(
                         onPressed: () {
-                          Navigator.of(context).pushNamed(HomeScreen.id);
+                          Navigator.of(context).pushNamed(HomeScreen1.id);
                         },
                         child: Text(
                           'تسجيل الدخول',
